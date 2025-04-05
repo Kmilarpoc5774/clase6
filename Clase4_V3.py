@@ -3,7 +3,8 @@ class Paciente:
         self.__nombre = '' 
         self.__cedula = 0 
         self.__genero = '' 
-        self.__servicio = '' 
+        self.__servicio = ''
+        self.__prueba = 1 
               
     #metodos get    
     def verNombre(self):
