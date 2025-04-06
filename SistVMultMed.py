@@ -63,7 +63,15 @@ class Mascota:
             nombres.add(nombre)
             nueva_lista.append(med)
      self.__lista_medicamentos = nueva_lista
-    
+
+    def eliminarMedicamento(self, nombre_medicamento):
+        for m in self.__lista_medicamentos:
+            if m.verNombre().lower() == nombre_medicamento.lower():
+                self.__lista_medicamentos.remove(m)
+                print(f"Medicamento '{nombre_medicamento}' eliminado con éxito.")
+                return True
+        print(f"Medicamento '{nombre_medicamento}' no encontrado.")
+        return False    
 class sistemaV:
     def __init__(self):
         self.__lista_mascotas = []
@@ -102,7 +110,6 @@ class sistemaV:
                 self.__lista_mascotas.remove(masc)  #opcion con el pop
                 return True  #eliminado con exito
         return False 
-
 def main():
     servicio_hospitalario = sistemaV()
     # sistma=sistemaV()
