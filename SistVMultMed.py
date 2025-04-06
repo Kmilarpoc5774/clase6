@@ -52,8 +52,17 @@ class Mascota:
         except ValueError:
             print("Error la fecha debe de estar de forma dd/mmm/yy. Intentelo nuevamente con este formato")
 
-    def asignarLista_Medicamentos(self,n):
-        self.__lista_medicamentos = n 
+    def asignarLista_Medicamentos(self, lista_med):
+     nombres = set()
+     nueva_lista = []
+     for med in lista_med:
+        nombre = med.verNombre().lower()
+        if nombre in nombres:
+            print(f"El medicamento '{nombre}' ya está en la lista, se omite.")
+        else:
+            nombres.add(nombre)
+            nueva_lista.append(med)
+     self.__lista_medicamentos = nueva_lista
     
 class sistemaV:
     def __init__(self):
