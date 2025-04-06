@@ -46,7 +46,13 @@ class Mascota:
     def asignarPeso(self,p):
         self.__peso=p
     def asignarFecha(self,f):
-        self.__fecha_ingreso=f
+        try: 
+            fecha_v= datetime.strptime(f,"%d /%m/%y")
+            self.__fecha_ingreso=fecha_v.date()
+        
+        except ValueError:
+            print("Error la fecha debe de estar de forma dd/mmm/yy. Intentelo nuevamente con este formato")
+
     def asignarLista_Medicamentos(self,n):
         self.__lista_medicamentos = n 
     
