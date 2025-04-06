@@ -1,3 +1,4 @@
+import datetime
 class Medicamento:
     def __init__(self):
         self.__nombre = "" 
@@ -175,12 +176,3 @@ def main():
 
 if __name__=='__main__':
     main()
-
-
-
-
-
-            
-
-                
-
