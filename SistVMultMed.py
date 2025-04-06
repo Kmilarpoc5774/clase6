@@ -12,8 +12,7 @@ class Medicamento:
     def asignarNombre(self,med):
         self.__nombre = med 
     def asignarDosis(self,med):
-        self.__dosis = med 
-        
+        self.__dosis = med        
 class Mascota:
     
     def __init__(self):
@@ -59,7 +58,7 @@ class Mascota:
 class sistemaV:
     def __init__(self):
         self.__lista_mascotas = []
-    
+ 
     def verificarExiste(self,historia):
         for m in self.__lista_mascotas:
             if historia == m.verHistoria():
